@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* grid */
+/*  {
+    @include susy-breakpoint($break-md, 6){
+    }
+    
+    @include susy-breakpoint($break-sm, $content){
+    } 
+}*/
+/* base */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.h5 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.text-sm {
+  font-size: 18px;
+}
+
+.text-xs {
+  font-size: 14px;
+}
+
+.link-btn-1 {
+  font-size: 18px;
+  line-height: 36px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.link-btn-1:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-color-1 {
+  background: #007a87;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn-color-2 {
+  background: #393c3d;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn-color-3 {
+  background: #7b0051;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* index */
+body {
+  background-color: #edefed;
+}
+
+.header {
+  position: relative;
+  z-index: 9999;
+  overflow: auto;
+  padding: 10px 15px;
+}
+.header img {
+  width: 32px;
+}
+.header .navbar {
+  padding: 2px 0;
+}
+.header .navbar a {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 30px;
+  line-height: 28px;
+  padding-right: 32px;
+}
+.header .navbar a i {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 28px;
+}
+.header .navbar a i img {
+  display: block;
+  width: 24px;
+}
+.header .navbar .host {
+  padding: 0 10px;
+  border: solid 2px #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.header .navbar .host:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header .navbar .user {
+  margin-right: 0;
+  padding-right: 34px;
+}
+.header .navbar .user i {
+  top: 0;
+  width: 28px;
+  height: 28px;
+}
+.header .navbar .user i img {
+  width: 28px;
+  border: solid 2px #fff;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.bn-slideshow {
+  position: absolute;
+  z-index: 9990;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bn-content {
+  position: relative;
+  z-index: 9999;
+  padding: 150px 0;
+  text-align: center;
+  color: #fff;
+}
+.bn-content p {
+  line-height: 2em;
+  padding: 7px 0 15px 0;
+}
+
+.searchbar {
+  position: relative;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px 0;
+}
+.searchbar form {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.searchbar form:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.searchbar form label input {
+  border: none;
+  padding: 0 10px;
+  line-height: 32px;
+  font-size: 14px;
+}
+.searchbar form label .location {
+  width: 40.2777777778%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+  margin: 0;
+}
+.searchbar form label .checkin, .searchbar form label .checkout, .searchbar form label .people {
+  width: 15.2777777778%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+  margin: 0;
+}
+.searchbar form .submit {
+  width: 6.9444444444%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 9999;
+  background-color: #edefed;
+  padding-top: 50px;
+}
+
+.sort-wrap {
+  text-align: center;
+}
+.sort-wrap .sort {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+.sort-wrap .sort:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.sort-wrap .sort h3, .sort-wrap .sort p {
+  text-align: center;
+}
+.sort-wrap .sort h3 {
+  margin-bottom: 10px;
+}
+.sort-wrap .sort .place {
+  width: 98.6111111111%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+  overflow: auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background: #ccc;
+}
+.sort-wrap .sort .place li {
+  width: 31.9444444444%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+}
+.sort-wrap .sort .place-layout li:nth-child(1), .sort-wrap .sort .place-layout li:nth-child(7) {
+  width: 65.2777777778%;
+  float: left;
+  margin-left: 0.6944444444%;
+  margin-right: 0.6944444444%;
+  background-color: aquamarine;
+}
+.sort-wrap .sort .link-btn-2 {
+  display: inline-block;
+  width: 31.9444444444%;
+  line-height: 32px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #565a5c;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+}
+
+.slide {
+  overflow: hidden;
+}

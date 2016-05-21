@@ -1,0 +1,26 @@
+/* grid */
+$base-font-size: 14px;
+$base-line-height: 24px;
+$rhythm-unit: "px";
+
+$susy: (
+    columns: 12,
+    gutters: 1/5,
+    gutter-position: split,
+    debug: (image: hide)
+);
+
+$content:inside;
+
+$break-xs: max-width 695px;
+$break-sm: max-width 750px;
+$break-md: max-width 970px;
+$break-lg: max-width 1170px;
+
+/*  {
+    @include susy-breakpoint($break-md, 6){
+    }
+    
+    @include susy-breakpoint($break-sm, $content){
+    } 
+}*/
