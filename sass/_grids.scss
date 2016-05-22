@@ -10,7 +10,11 @@ $susy: (
     debug: (image: hide)
 );
 
-$content:inside;
+$content: (
+    columns: 12,
+    gutters: 0,
+    gutter-position: inside
+);
 
 $break-xs: max-width 695px;
 $break-sm: max-width 750px;
@@ -22,5 +26,5 @@ $break-lg: max-width 1170px;
     }
     
     @include susy-breakpoint($break-sm, $content){
-    } 
+    }
 }*/

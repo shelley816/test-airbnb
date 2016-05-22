@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Document</title>
+    <title>旅遊住宿 | 短租房 | 渡假公寓</title>
     <link rel="stylesheet" href="css/style.css">
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><!-- form -->
@@ -17,9 +17,19 @@
 </head>
 <body>
     <header class="header">
-        <a href="">
-            <img src="images/logo.png" alt="" class="logo pull-left">
+        <a class="logo" href="">
+            <img src="images/logo@2x.png" alt="" class="pull-left">
         </a>
+        <div class="hide-menu">
+            <div class="logo-r">
+                <a href="">
+                    <img src="images/logo_r@2x.png" alt="">
+                </a>
+            </div>
+            <a class="menu" href="">
+                <img src="images/menu@2x.png" alt="">
+            </a>
+        </div>
         <div class="navbar pull-right">
             <a class="host" href="">成為房東</a>
             <a class="chat" href="">訊息<i><img src="images/icon_01@2x.png"></i></a>
@@ -129,10 +139,15 @@
                             <div class="h5">巴黎</div>
                         </a>
                     </li>
-                    <li>
+                    <li class="house">
                         <a href="">
                             <img src="images/place_12.jpg" alt="">
-                            <div class="h5">義大利</div>
+                            <div class="host-img">
+                                <img src="images/user_img@2x.png">
+                            </div>
+                            <div class="h5">由Danai出租<br><span>義大利</span></div>
+                            <div class="price">
+                            <span>$ 1892 TWD</span></div>
                         </a>
                     </li>
                     <li>
@@ -153,10 +168,15 @@
                             <div class="h5">英國</div>
                         </a>
                     </li>
-                    <li>
+                    <li class="house">
                         <a href="">
                             <img src="images/place_13.jpg" alt="">
-                            <div class="h5">羅馬</div>
+                            <div class="host-img">
+                                <img src="images/user_img@2x.png">
+                            </div>
+                            <div class="h5">由Danai出租<br><span>羅馬</span></div>
+                            <div class="price">
+                            <span>$ 1892 TWD</span></div>
                         </a>
                     </li>
                     <li>
@@ -288,9 +308,19 @@
                 </ul>
             </div>
         </div>
+        <div class="footer-hide">
+            <a href="">關於</a>
+            <a href="">工作機會</a>
+            <a href="">傳媒</a>
+            <a href="">Blog</a>
+            <a href="">服務條款與私隱聲明</a>
+        </div>
         <div class="follow">
             <h4 class="text-sm">關注我們</h4>
-            <a href=""><img src="images/icon_f_fb.png" alt=""></a><a href=""><img src="images/icon_f_go.png" alt=""></a><a href=""><img src="images/icon_f_pin.png" alt=""></a><a href=""><img src="images/icon_f_tw.png" alt=""></a>
+            <a class="icon-fb" href=""></a>
+            <a class="icon-go" href=""></a>
+            <a class="icon-pin" href=""></a>
+            <a class="icon-tw" href=""></a>
             <div class="copy text-xs">
                 &copy; Airbnb, Inc.
             </div>

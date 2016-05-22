@@ -8,8 +8,13 @@ body {
     z-index: 9999;
     overflow: auto;
     padding: 10px 15px;
-    img {
-        width: 32px;
+    .logo {
+        img {
+            width: 32px;
+        }
+    }
+    .hide-menu {
+        display: none;
     }
     .navbar {
         padding: 2px 0;
@@ -37,7 +42,7 @@ body {
         }
         .host {
             padding: 0 10px;
-            border: solid 2px #fff;
+            border: 2px solid #fff;
             @include border-radius(2px);
             &:hover {
                 background-color: rgba(0, 0, 0, .3);
@@ -54,6 +59,38 @@ body {
                     width: 28px;
                     border: solid 2px #fff;
                     @include border-radius(100%);
+                }
+            }
+        }
+    }
+    @include susy-breakpoint($break-xs, $content){
+        background: #fff;
+        .logo {
+            display: none;
+        }
+        .navbar {
+            display: none;
+        }
+        .hide-menu {
+            display: block;
+            position: relative;
+            .logo-r {
+                a {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    margin: 0 auto;
+                    img {
+                        width: 32px;
+                    }
+                }
+            }
+            .menu {
+                position: absolute;
+                top: 0;
+                padding: 5px 0;
+                img {
+                    width: 24px;
                 }
             }
         }
@@ -78,13 +115,26 @@ body {
         line-height: 2em;
         padding: 7px 0 15px 0;
     }
+    @include susy-breakpoint($break-xs, $content){
+        padding: 80px 0 50px 0;
+        h2 {
+            font-size: $fontSize-md;
+        }
+        p {
+            padding: 7px 30px 15px 30px;
+            font-size: $fontSize-xs;
+        }
+        .link-btn-1 {
+            display: none;
+        }
+    }
 }
 
 .searchbar {
     position: relative;
     z-index: 9999;
     background-color: rgba(0, 0, 0, .3);
-    padding: 30px 0;
+    padding: 30px;
     @include with-layout($content){
         form {
             @include container($break-sm);
@@ -125,6 +175,22 @@ body {
                 @include border-left-radius(0);
                 border-bottom: 1px solid darken($btnColor-r,10%);
                 border-right: 1px solid darken($btnColor-r,10%);
+            }
+        }
+    }
+    @include susy-breakpoint($break-xs, $content){
+        padding: 30px;
+        form {
+            label {
+                .checkin, .checkout, .people {
+                    display: none;
+                }
+                .location {
+                    @include span(9);
+                }
+            }
+            .submit {
+                @include span(3);
             }
         }
     }
@@ -181,6 +247,9 @@ body {
                         img {
                             @include opacity(0.7);
                         }
+                        .host-img img {
+                            @include opacity(1);
+                        }
                     }
                 }
             }
@@ -197,6 +266,38 @@ body {
                     }
                 }
             }
+            .house {
+                .host-img {
+                    position: relative;
+                    z-index: 9995;
+                    top: 25%;
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    border: 2px solid #fff;
+                    @include border-radius(100%);
+                }
+                .h5 {
+                    top: 30%;
+                    font-size: $fontSize-lg / 2;
+                    font-weight: normal;
+                    span {
+                        font-size: $fontSize-xs;
+                    }
+                }
+                .price {
+                    position: relative;
+                    top: 45%;
+                    z-index: 9995;
+                    span {
+                        display: inline-block;
+                        padding: 10px;
+                        color: $fontColor-w;
+                        background-color: $fontColor-gr;
+                    }
+                }
+            }
         }
         .link-btn-2 {
             clear: both;
@@ -205,18 +306,127 @@ body {
             margin: 0 auto;
             text-align: center;
         }
+        @include susy-breakpoint($break-md, 12){
+            @include container($break-sm);
+            .place {
+                li {
+                    @include span(6);
+                    &:first-child {
+                        @include span(12);
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .place-layout {
+                li {
+                    &:nth-child(8) {
+                        @include span(12);
+                        a {
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    &:nth-child(7) {
+                        @include span(6);
+                        a {
+                            img {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .link-btn-2 {
+                width: span(12);
+            }
+        }
+        @include susy-breakpoint($break-xs, $content){
+            @include container;
+            .place {
+                width: 100%;
+                margin: 0;
+                li {
+                    @include span(12);
+                    margin: 0;
+                    height: auto;
+                    a {
+                        img {
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                            position: relative;
+                        }
+                        .h5 {
+                            position: absolute;
+                            top: 45%;
+                            left: 50%;
+                            margin-left: -150px;
+                            width: 300px;
+                        }
+                    }
+                    &:first-child {
+                        @include span(12);
+                        margin: 0;
+                    }
+                }
+            }
+            .place-layout {
+                width: 100%;
+                margin: 0;
+                li {
+                    &:nth-child(7), &:nth-child(8) {
+                        @include span(12);
+                        margin: 0;
+                        a {
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .house {
+                    .host-img {
+                        position: absolute;
+                        top: 10%;
+                        left: 50%;
+                        margin-left: -35px;
+                    }
+                    .h5 {
+                        position: absolute;
+                        top: 45%;
+                    }
+                    .price {
+                        position: absolute;
+                        top: 70%;
+                    }
+                }
+            }
+            .link-btn-2 {
+                display: none;
+            }
+        }
     }
 }
 
 .slide {
     overflow: hidden;
     height: 600px;
+    @include susy-breakpoint($break-xs, $content){
+        display: none;
+    }
 }
 
 .community-wrap {
     @include container(inside);
     @include gutters(12);
-    padding: 50px 0 20px 0;
+    padding: 50px 0 0 0;
     h3 {
         color: $fontColor-gr;
         text-align: center;
@@ -230,6 +440,7 @@ body {
             height: 400px;
             overflow: hidden;
             background-color: darken($Color-gr, 70%);
+            margin-bottom: 20px;
             a {
                 color: $fontColor-w;
                 position: relative;
@@ -273,6 +484,22 @@ body {
             }
         }
     }
+    @include susy-breakpoint($break-md, 12){
+        .community {
+            li {
+                @include span(6);
+                height: 500px;
+                a {
+                    .h5 {
+                        margin-top: 320px;
+                    }
+                }
+            }
+        }
+    }
+    @include susy-breakpoint($break-xs, $content){
+        display: none;
+    }
 }
 
 footer {
@@ -314,6 +541,36 @@ footer {
                 }
             }
         }
+        @include susy-breakpoint($break-md, 12){
+            @include container($break-sm);
+            a {
+                font-size: $fontSize-xs - 2;
+            }
+        }
+        @include susy-breakpoint($break-xs, $content){
+            border-bottom: none;
+            .language {
+                @include span(12);
+                margin: 0;
+                padding: 0 30px;
+            }
+            .footer-container {
+                display: none;
+            }
+        }
+    }
+    .footer-hide {
+        display: none;
+        @include susy-breakpoint($break-xs, $content){
+            display: block;
+            text-align: center;
+            a {
+                display: inline-block;
+                font-size: $fontSize-xs;
+                color: $fontColor-w;
+                margin: 0 5px;
+            }
+        }
     }
     .follow {
         padding-top: 30px;
@@ -340,6 +597,14 @@ footer {
         }
         .copy {
             color: $Color-gr;
+        }
+        @include susy-breakpoint($break-md, 12){
+            @include container($break-sm);
+        }
+        @include susy-breakpoint($break-xs, $content){
+            h4 {
+                display: none;
+            }
         }
     }
 }
