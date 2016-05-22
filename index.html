@@ -6,12 +6,19 @@
     
     <title>旅遊住宿 | 短租房 | 渡假公寓</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css"><!-- slide -->
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><!-- form -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
     <script type="text/javascript" src="js/jquery.customSelect.js"></script><!-- form -->
+    <script type="text/javascript" src="js/jquery.cycle.all.js"></script><!-- slide -->
+    <script type="text/javascript" src="js/jquery.maximage.js"></script><!-- slide -->
     <script type="text/javascript">
         jQuery(function(){
+            // form
             jQuery("select.styled").customSelect();
+            
+            // slide
+            jQuery("#maximage").maximage();
         });
     </script>
 </head>
@@ -38,8 +45,10 @@
         </div>
     </header>
     
-    <div class="bn-slideshow">
-        <img src="images/bn_01.jpg" alt="">
+    <div id="maximage" class="bn-slideshow">
+        <img src="images/bn_03.jpg" alt="" width="2000" height="1333">
+        <img src="images/bn_01.jpg" alt="" width="2000" height="1333">
+        <img src="images/bn_02.jpg" alt="" width="2000" height="1333"/>
     </div>
     
     <div class="bn-content">
@@ -70,7 +79,7 @@
                     </select>
                 </div>
             </label>
-            <button class="submit btn-submit" type="submit">搜索</button>
+            <button class="submit btn-submit" type="submit">搜尋</button>
         </form>
     </div>
     

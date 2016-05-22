@@ -26,6 +26,7 @@ body {
             margin-right: 30px;
             line-height: 28px;
             padding-right: 32px;
+            @include single-text-shadow;
             i {
                 position: absolute;
                 top: 2px;
@@ -111,6 +112,7 @@ body {
     padding: 150px 0;
     text-align: center;
     color: $fontColor-w;
+    @include single-text-shadow;
     p {
         line-height: 2em;
         padding: 7px 0 15px 0;
@@ -608,3 +610,4 @@ footer {
         }
     }
 }
+

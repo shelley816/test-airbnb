@@ -199,6 +199,25 @@ h3 {
   padding: 10px;
 }
 
+#supersize {
+  position: fixed;
+}
+
+#supersize img, #supersize a {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#supersize .prevslide, #supersize .prevslide img {
+  z-index: 1;
+}
+
+#supersize .activeslide, #supersize .activeslide img {
+  z-index: 2;
+}
+
 /* index */
 body {
   background-color: #edefed;
@@ -227,6 +246,7 @@ body {
   margin-right: 30px;
   line-height: 28px;
   padding-right: 32px;
+  text-shadow: 0px 0 10px rgba(86, 90, 92, 0.5);
 }
 .header .navbar a i {
   position: absolute;
@@ -314,6 +334,7 @@ body {
   padding: 150px 0;
   text-align: center;
   color: #fff;
+  text-shadow: 0px 0 10px rgba(86, 90, 92, 0.5);
 }
 .bn-content p {
   line-height: 2em;
