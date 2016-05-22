@@ -73,7 +73,7 @@ body {
     z-index: 9999;
     padding: 150px 0;
     text-align: center;
-    color: $Color-w;
+    color: $fontColor-w;
     p {
         line-height: 2em;
         padding: 7px 0 15px 0;
@@ -85,29 +85,47 @@ body {
     z-index: 9999;
     background-color: rgba(0, 0, 0, .3);
     padding: 30px 0;
-    form {
-        @include container($break-sm);
-        @include border-radius(2px);
-        background-color: #fff;
-        label {
-            input {
-                border: none;
-                padding: 0 10px;
-                line-height: $fontSize-md;
-                font-size: $fontSize-xs;
+    @include with-layout($content){
+        form {
+            @include container($break-sm);
+            @include border-radius(2px);
+            background-color: #fff;
+            label {
+                input {
+                    border: none;
+                    padding: 0 10px;
+                    line-height: $fontSize-md;
+                    font-size: $fontSize-xs;
+                    background: none;
+                }
+                .location, .checkin, .checkout, .people {
+                    margin: 0;
+                }
+                .location {
+                    @include span(5);
+                }
+                .checkin {
+                    @include span(2.2);
+                    padding-right: span(1);
+                    background: url(../images/icon_date_01.png) 100px center no-repeat;
+                }
+                .checkout {
+                    @include span(1.8);
+                }
+                .people {
+                    @include span(2);
+                }
+                .location, .checkout {
+                    border-right: 1px solid lighten($Color-gr,50%);
+                }
             }
-            .location {
-                @include span(5);
+            .submit {
+                @include span(1);
                 margin: 0;
+                @include border-left-radius(0);
+                border-bottom: 1px solid darken($btnColor-r,10%);
+                border-right: 1px solid darken($btnColor-r,10%);
             }
-            .checkin, .checkout, .people {
-                @include span(2);
-                margin: 0;
-            }
-        }
-        .submit {
-            @include span(1);
-            margin: 0;
         }
     }
 }
@@ -120,12 +138,12 @@ body {
 }
 
 .sort-wrap {
-    text-align: center;
     .sort {
-        @include container($break-sm);
+        @include container($break-md);
         padding-bottom: 50px;
         h3, p {
             text-align: center;
+            color: $fontColor-gr;
         }
         h3 {
             margin-bottom: 10px;
@@ -135,33 +153,193 @@ body {
             overflow: auto;
             margin-top: 15px;
             margin-bottom: 30px;
-            background: #ccc;
             li {
                 @include span(4);
+                height: 345px;
+                margin-top: gutter(12);
+                margin-bottom: gutter(12);
+                overflow: hidden;
+                background-color: darken($Color-gr, 70%);
+                a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        position: absolute;
+                        height: 100%;
+                        z-index: 9994;
+                    }
+                    .h5 {
+                        position: relative;
+                        top: 45%;
+                        z-index: 9995;
+                        text-align: center;
+                        @include single-text-shadow;
+                    }
+                    &:hover {
+                        img {
+                            @include opacity(0.7);
+                        }
+                    }
+                }
             }
         }
         .place-layout {
             li {
                 &:nth-child(1), &:nth-child(7) {
                     @include span(8);
-                    background-color: aquamarine;
+                    a {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
                 }
             }
         }
         .link-btn-2 {
-            display: inline-block;
+            clear: both;
+            display: block;
             width: span(4);
-            line-height: $fontSize-md;
             margin: 0 auto;
-            font-size: $fontSize-sm;
-            font-weight: bold;
-            color: $Color-gr;
-            background-color: $Color-w;
-            border: 1px solid darken($Color-w,20%);
+            text-align: center;
         }
     }
 }
 
 .slide {
     overflow: hidden;
+    height: 600px;
+}
+
+.community-wrap {
+    @include container(inside);
+    @include gutters(12);
+    padding: 50px 0 20px 0;
+    h3 {
+        color: $fontColor-gr;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .community {
+        color: $fontColor-w;
+        overflow: auto;
+        li {
+            @include span(3);
+            height: 400px;
+            overflow: hidden;
+            background-color: darken($Color-gr, 70%);
+            a {
+                color: $fontColor-w;
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                img {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    z-index: 9994;
+                }
+                .btn {
+                    position: relative;
+                    z-index: 9995;
+                    top: 0;
+                }
+                .h5, .p-text {
+                    position: relative;
+                    z-index: 9995;
+                    @include single-text-shadow;
+                }
+                .h5 {
+                    margin-top: 210px;
+                    margin-bottom: 10px;
+                }
+                .p-text {
+                    padding: 0 10px;
+                    line-height: 1.5em;
+                    u {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+                &:hover {
+                    img {
+                        @include opacity(0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    color: $fontColor-w;
+    background: url(../images/footer_lodyas.png);
+    padding: 50px 0;
+    .footer, .follow {
+        @include container($break-md);
+    }
+    .footer {
+        border-bottom: 1px solid $Color-gr;
+        padding-bottom: 50px;
+        .language {
+            @include span(3);
+            margin:0 gutters(1);
+            .styled-select {
+                background-color: $Color-gr;
+                margin-bottom: 15px;
+                @include border-radius(2px);
+            }
+            .styled-select select {
+                color: #fff;
+                font-size: $fontSize-sm;
+                line-height: $fontSize-lg;
+            }
+        }
+        .footer-container {
+            @include span(2);
+            h4 {
+                margin-bottom: 15px;
+            }
+            ul {
+                font-size: $fontSize-xs;
+                li {
+                    line-height: 1.5em;
+                    a {
+                        color: darken($fontColor-w, 20%);
+                    }
+                }
+            }
+        }
+    }
+    .follow {
+        padding-top: 30px;
+        text-align: center;
+        a {
+            display: inline-block;
+            margin: 15px 5px;
+            width: 36px;
+            height: 36px;
+            border: 1px solid $Color-gr;
+            @include border-radius(100%);
+        }
+        .icon-fb {
+            background: url(../images/icon_f_fb.png) center center no-repeat;
+        }
+        .icon-go {
+            background: url(../images/icon_f_go.png) center center no-repeat;
+        }
+        .icon-pin {
+            background: url(../images/icon_f_pin.png) center center no-repeat;
+        }
+        .icon-tw {
+            background: url(../images/icon_f_tw.png) center center no-repeat;
+        }
+        .copy {
+            color: $Color-gr;
+        }
+    }
 }

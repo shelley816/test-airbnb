@@ -1,15 +1,25 @@
+$bg-Color: #edefed;
+
 $fontSize-xs: 14px;
 $fontSize-sm: 18px;
-$fontSize-md: 32px;
+$fontSize-md: 36px;
 $fontSize-lg: 48px;
 
 $Color-w: #fff;
 $Color-gr: #565a5c;
 
-$bg-Color: #edefed;
+$fontColor-w: #fff;
+$fontColor-gr: #565a5c;
+
+$btnColor-r: #ff5a5f;
+
+$default-text-shadow-color: rgba($fontColor-gr, .5);
+$default-text-shadow-blur: 10px;
+$default-text-shadow-v-offset: 0;
 
 $types: (
     color-1: #007a87,
     color-2: #393c3d,
     color-3: #7b0051,
+    color-4: #0268b3,
 ) !default;
