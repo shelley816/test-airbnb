@@ -420,10 +420,22 @@ body {
 .slide {
     overflow: hidden;
     height: 600px;
+    .slide-info {
+        padding-top: 200px;
+    }
     @include susy-breakpoint($break-xs, $content){
         display: none;
     }
+    .slides-navigation {
+        a {
+            @include opacity(0.5);
+            &:hover {
+                @include opacity(1);
+            }
+        }
+    }
 }
+
 
 .community-wrap {
     @include container(inside);

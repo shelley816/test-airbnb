@@ -60,6 +60,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif, Microsoft JhengHei;
+}
+
 a {
   text-decoration: none;
 }
@@ -143,9 +147,10 @@ h3 {
 .styled-select select {
   background: transparent;
   line-height: 36px;
+  height: 36px;
   font-size: 14px;
   color: #565a5c;
-  width: 105%;
+  width: 115%;
   padding: 0 10px;
   border: 0;
   border-radius: 0;
@@ -713,10 +718,21 @@ body {
   overflow: hidden;
   height: 600px;
 }
+.slide .slide-info {
+  padding-top: 200px;
+}
 @media (max-width: 695px) {
   .slide {
     display: none;
   }
+}
+.slide .slides-navigation a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.slide .slides-navigation a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
 
 .community-wrap {

@@ -4,6 +4,10 @@
 @import "breakpoint";
 @include border-box-sizing;
 
+body {
+    font-family: sans-serif, Microsoft JhengHei;
+}
+
 a { text-decoration:none; }
 ::selection { }
 ::-moz-selection { }
