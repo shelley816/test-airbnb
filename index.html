@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>旅遊住宿 | 短租房 | 渡假公寓</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/superslides.css"><!-- slide -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.customSelect.js"></script><!-- form -->
+    <script src="js/jquery.easing.1.3.js"></script><!-- slide -->
+    <script src="js/jquery.animate-enhanced.min.js"></script><!-- slide -->
+    <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script><!-- slide -->
+    <script type="text/javascript">
+        jQuery(function(){
+            // form
+            jQuery("select.styled").customSelect();
+            
+            // slide
+            jQuery('#slides').superslides({
+                animation: 'fade',
+                hashchange: false,
+                play: 5000
+            });
+
+            jQuery('#slides-2').superslides({
+                animation: 'fade'
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="">
+            <img src="images/logo@2x.png" alt="" class="pull-left">
+        </a>
+        <div class="hide-menu">
+            <div class="logo-r">
+                <a href="">
+                    <img src="images/logo_r@2x.png" alt="">
+                </a>
+            </div>
+            <a class="menu" href="">
+                <img src="images/menu@2x.png" alt="">
+            </a>
+        </div>
+        <div class="navbar pull-right">
+            <a class="host" href="">成為房東</a>
+            <a class="chat" href="">訊息<i><img src="images/icon_01@2x.png"></i></a>
+            <a class="help" href="">幫助<i><img src="images/icon_02@2x.png"></i></a>
+            <a class="user" href="">User name<i><img src="images/user_img@2x.png"></i></a>
+        </div>
+    </header>
+    
+    <div class="bn-slideshow">
+        <div id="slides">
+            <div class="slides-container">
+                <img src="images/bn_03.jpg" alt="">
+                <img src="images/bn_01.jpg" alt="">
+                <img src="images/bn_02.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bn-content">
+        <h2>歡迎回家</h2>
+        <p class="text-sm">從超過191個國家的當地人租住獨一無二的家。</p>
+        <a class="link-btn-1" href="">如何使用?</a>
+    </div>
+    
+    <div class="searchbar">
+        <form>
+            <label class="wrap-location">
+                <input class="location" type="text" autocomplete="off" name="location" placeholder="想去哪裡？" />
+            </label>
+            <label>
+                <input class="checkin" type="text" name="checkin" placeholder="入住日期" />
+            </label>
+            <label>
+                <input class="checkout" type="text" name="checkout" placeholder="退房日期" />
+            </label>
+            <label>
+                <div class="people styled-select">
+                    <select>
+                        <option value="1">1位房客</option>
+                        <option value="2">2位房客</option>
+                        <option value="3">3位房客</option>
+                        <option value="4">4位房客</option>
+                        <option value="5">5位房客</option>
+                    </select>
+                </div>
+            </label>
+            <button class="submit btn-submit" type="submit">搜尋</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <div class="sort-wrap">
+            <div class="sort">
+                <h3>觀看旅遊指南</h3>
+                <p class="text-sm">發掘由Airbnb房東推薦的數百個當地好去處</p>
+                <br>
+                <ul class="place">
+                    <li>
+                        <a href="">
+                            <img src="images/place_01.jpg" alt="">
+                            <div class="h5">舊金山</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_02.jpg" alt="">
+                            <div class="h5">紐約</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_03.jpg" alt="">
+                            <div class="h5">倫敦</div>
+                        </a>
+                    </li>
+                </ul><!-- /place -->
+                <a class="link-btn-2" href="">查看旅遊指南</a>
+            </div><!-- /sort -->
+            <div class="sort">
+                <h3>週末好去處</h3>
+                <p class="text-sm">發現離家近的好地方</p>
+                <br>
+                <ul class="place">
+                    <li>
+                        <a href="">
+                            <img src="images/place_04.jpg" alt="">
+                            <div class="h5">日本</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_05.jpg" alt="">
+                            <div class="h5">京都</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_06.jpg" alt="">
+                            <div class="h5">東京</div>
+                        </a>
+                    </li>
+                </ul><!-- /place -->
+                <a class="link-btn-2" href="">查看所有目的地</a>
+            </div><!-- /sort -->
+            <div class="sort">
+                <h3>探索世界</h3>
+                <p class="text-sm">搜羅全球熱門目的地</p>
+                <br>
+                <ul class="place place-layout">
+                    <li>
+                        <a href="">
+                            <img src="images/place_07.jpg" alt="">
+                            <div class="h5">巴黎</div>
+                        </a>
+                    </li>
+                    <li class="house">
+                        <a href="">
+                            <img src="images/place_12.jpg" alt="">
+                            <div class="host-img">
+                                <img src="images/user_img@2x.png">
+                            </div>
+                            <div class="h5">由Danai出租<br><span>義大利</span></div>
+                            <div class="price">
+                            <span>$ 1892 TWD</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_08.jpg" alt="">
+                            <div class="h5">倫敦</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_09.jpg" alt="">
+                            <div class="h5">西班牙</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_10.jpg" alt="">
+                            <div class="h5">英國</div>
+                        </a>
+                    </li>
+                    <li class="house">
+                        <a href="">
+                            <img src="images/place_13.jpg" alt="">
+                            <div class="host-img">
+                                <img src="images/user_img@2x.png">
+                            </div>
+                            <div class="h5">由Danai出租<br><span>羅馬</span></div>
+                            <div class="price">
+                            <span>$ 1892 TWD</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_11.jpg" alt="">
+                            <div class="h5">倫敦</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_01.jpg" alt="">
+                            <div class="h5">舊金山</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_02.jpg" alt="">
+                            <div class="h5">紐約</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/place_03.jpg" alt="">
+                            <div class="h5">倫敦</div>
+                        </a>
+                    </li>
+                </ul><!-- /place -->
+            </div><!-- /sort -->
+        </div><!-- /wrap-sort -->
+    
+        <div id="slides-2" class="slide">
+            <div class="slides-container">
+                <div>
+                    <img src="images/bn_05.jpg" alt="">
+                    <div class="bn-content slide-info">
+                        <h2>家在四方</h2>
+                        <p class="text-sm">Airbnb房東在世界各地締造一個個有歸屬感的家。</p>
+                        <a class="link-btn-1" href="">開始探索</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/bn_06.jpg" alt="">
+                    <div class="bn-content slide-info">
+                        <h2>家在四方</h2>
+                        <p class="text-sm">無論是豪華別墅還是適合全家出行的公寓, 您都能在<br>Airbnb上找到最溫暖舒適的家。</p>
+                        <a class="link-btn-1" href="">開始探索</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/bn_04.jpg" alt="">
+                    <div class="bn-content slide-info">
+                        <h2>和我們一起認識— BÉLO</h2>
+                        <p class="text-sm">一個像徵著歸屬感的標記和它背後的故事</p>
+                        <a class="link-btn-1" href="">開始探索</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/bn_07.jpg" alt="">
+                    <div class="bn-content slide-info">
+                        <h2>家在四方</h2>
+                        <p class="text-sm">Airbnb房東在世界各地締造一個個有歸屬感的家。</p>
+                        <a class="link-btn-1" href="">開始探索</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="slides-navigation">
+                <a href="#" class="next"><img src="images/arrow_r.png" alt=""></a>
+                <a href="#" class="prev"><img src="images/arrow_l.png" alt=""></a>
+            </nav>
+        </div>
+    
+        <div class="community-wrap">
+            <h3>我們的社區</h3>
+            <ul class="community">
+                <li>
+                    <a href="">
+                        <img src="images/people_01.jpg" alt="">
+                        <div class="btn btn-color-1">旅行</div>
+                        <div class="h5">Alice &#38; Chris</div>
+                        <div class="p-text text-xs">不管是跨洋過海還是跨城郊遊，Alice &#38; Chris總是尋找著最本真最當地化的體驗。<br><u>了解如何通過Airbnb旅行。</u></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/people_03.jpg" alt="">
+                        <div class="btn btn-color-2">商務差旅</div>
+                        <div class="h5">商務Airbnb</div>
+                        <div class="p-text text-xs">不管您因為工作來到哪裡，都像回到了家裡一樣。<br><u>讓您的團隊加入Airbnb。</u></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/people_02.jpg" alt="">
+                        <div class="btn btn-color-3">出租</div>
+                        <div class="h5">Nina</div>
+                        <div class="p-text text-xs">專業攝影師Nina喜歡幫助房客探索上海的藝術氣息！<br><u>了解如何在Airbnb出租。</u></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/people_04.jpg" alt="">
+                        <div class="btn btn-color-4">體驗</div>
+                        <div class="h5">Alexandra</div>
+                        <div class="p-text text-xs">創造屬於您的Airbnb<br><u>創造您的標誌，分享您的故事！</u></div>
+                    </a>
+                </li>
+            </ul><!-- /community -->
+        </div>
+    </div><!-- /container -->
+    
+    <footer>
+        <div class="footer">
+            <div class="language">
+                <form action="">
+                    <label>
+                       <div class="styled-select">
+                            <select class="people">
+                                <option value="zh-TW">中文 (繁體)</option>
+                                <option value="EN">English</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label>
+                       <div class="styled-select">
+                            <select class="people">
+                                <option value="TWD">TWD</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+                    </label>
+                </form>
+            </div>
+            <div class="footer-container">
+                <h4 class="text-sm">公司</h4>
+                <ul>
+                    <li><a href="">關於</a></li>
+                    <li><a href="">工作機會</a></li>
+                    <li><a href="">傳媒</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">幫助</a></li>
+                    <li><a href="">政策</a></li>
+                    <li><a href="">災難響應</a></li>
+                    <li><a href="">服務條款與私隱聲明</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h4 class="text-sm">探索</h4>
+                <ul>
+                    <li><a href="">信任與安全</a></li>
+                    <li><a href="">旅行基金</a></li>
+                    <li><a href="">Airbnb 精選</a></li>
+                    <li><a href="">手機功能版</a></li>
+                    <li><a href="">Airbnb行動</a></li>
+                    <li><a href="">商務差旅</a></li>
+                    <li><a href="">網站地圖</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h4 class="text-sm">出租</h4>
+                <ul>
+                    <li><a href="">為何出租?</a></li>
+                    <li><a href="">好客之道</a></li>
+                    <li><a href="">房東義務</a></li>
+                    <li><a href="">居家安全</a></li>
+                    <li><a href="">即時預訂</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-hide">
+            <a href="">關於</a>
+            <a href="">工作機會</a>
+            <a href="">傳媒</a>
+            <a href="">Blog</a>
+            <a href="">服務條款與私隱聲明</a>
+        </div>
+        <div class="follow">
+            <h4 class="text-sm">關注我們</h4>
+            <a class="icon-fb" href=""></a>
+            <a class="icon-go" href=""></a>
+            <a class="icon-pin" href=""></a>
+            <a class="icon-tw" href=""></a>
+            <div class="copy text-xs">
+                &copy; Airbnb, Inc.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "susy";
+@import "breakpoint";
+@include border-box-sizing;
+
+body {
+    font-family: sans-serif, Microsoft JhengHei;
+}
+
+a { text-decoration:none; }
+::selection { }
+::-moz-selection { }
+code::-moz-selection { }
+code::selection { }
